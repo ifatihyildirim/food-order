@@ -1,0 +1,9 @@
+<% @cart.each do |id, quantity| %>
+<% product = Product.find(id) %>
+<%= product.name %> adlı üründen <%= quantity %> adet tanesi <%= product.price %>TL toplam <%= product.price * quantity %>TL =>
+<%= link_to '-', product_cart_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
+<%= quantity %>
+<%= link_to '+', product_cart_path(product), data: { confirm: 'Are you sure?' } %>
+<br>
+<% end %>
+<%= link_to 'Empty Cart', cart_path, method: :delete, data: { confirm: 'Are you sure?' } %>
