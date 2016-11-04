@@ -1,0 +1,12 @@
+<h1>Order</h1>
+Order Number : <%= @order.number %>
+<br>
+Order Note : <%= @order.note %>
+<br>
+Order Date : <%= @order.created_at.to_time.strftime('%B %e at %l:%M %p') %>
+<br>
+<h3>Order Content</h3>
+<% @order.order_contents.each do |f| %>
+<%= f.product.name %>'dan <%= f.count %> adet
+<br>
+<% end %>

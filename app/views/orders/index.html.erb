@@ -1,0 +1,5 @@
+<h1>Order History</h1>
+<% @orders.each do |f| %>
+<%= time_ago_in_words(f.created_at) %> ago - <%= link_to f.number, order_path(f) %> => <%= link_to "Sil", order_path(f), method: :delete, data: { confirm: "Are you sure?" }  %>
+<br>
+<% end %>

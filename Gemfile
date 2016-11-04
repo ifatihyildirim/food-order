@@ -11,6 +11,8 @@ gem 'puma', '~> 3.0'
 gem 'sass-rails', '~> 5.0'
 #bootstrap-sass
 gem 'bootstrap-sass', '~> 3.3', '>= 3.3.7'
+#simple_form
+gem 'simple_form', '~> 3.3', '>= 3.3.1'
 #devise
 gem 'devise', '~> 4.2'
 # Use Uglifier as compressor for JavaScript assets

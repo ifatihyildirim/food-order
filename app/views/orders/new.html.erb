@@ -1,0 +1,10 @@
+<% @cart.each do |id, quantity| %>
+<% product = Product.find(id) %>
+<%= product.name %> adlı üründen <%= quantity %> adet tanesi <%= product.price %>TL toplam <%= product.price * quantity %>TL =>
+<br>
+<% end %>
+
+<%= simple_form_for @order do |b| %>
+  <%= b.text_area :note %>
+  <%= b.button :submit, label: "Confirm Order", :class => "btn-custom2" %>
+<% end %>

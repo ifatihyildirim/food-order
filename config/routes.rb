@@ -9,5 +9,7 @@ Rails.application.routes.draw do
     delete "cart" , to: "carts#eject"
   end
 
+  resources :orders
+
   root "products#index"
 end
