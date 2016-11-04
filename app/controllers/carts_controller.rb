@@ -27,7 +27,6 @@ class CartsController < ApplicationController
 
   def destroy
     session.delete(:cart)
-    puts "destroy"
     redirect_to :cart
   end
 

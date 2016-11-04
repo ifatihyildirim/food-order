@@ -29,6 +29,9 @@ class OrdersController < ApplicationController
 
         @order_content.save
       end
+      
+      session.delete(:cart)
+
       redirect_to orders_path
     else
       render "new"
